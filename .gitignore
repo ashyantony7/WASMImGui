@@ -1,0 +1,12 @@
+# CMake generated files
+cmake-build-*/
+build/
+
+# CMake user-specific files
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+CTestTestfile.cmake
+
+# Binding files
+src/bindings/*

@@ -1,0 +1,22 @@
+[requires]
+imgui/cci.20230105+1.89.2.docking
+glew/2.2.0
+
+[generators]
+cmake
+CMakeToolchain
+CMakeDeps
+VirtualBuildEnv
+
+[options]
+glew:shared=False
+
+[imports]
+bin, *.html -> ./bin
+bin, *.wasm -> ./bin
+bin, *.js -> ./bin
+./res/bindings, imgui_impl_glfw.cpp -> ../src/bindings
+./res/bindings, imgui_impl_opengl3.cpp -> ../src/bindings
+./res/bindings, imgui_impl_glfw.h -> ../src/bindings
+./res/bindings, imgui_impl_opengl3.h -> ../src/bindings
+./res/bindings, imgui_impl_opengl3_loader.h -> ../src/bindings
