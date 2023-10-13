@@ -10,3 +10,7 @@ CTestTestfile.cmake
 
 # Binding files
 src/bindings/*
+
+# Python environment
+env/
+venv/
