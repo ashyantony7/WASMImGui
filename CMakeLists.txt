@@ -16,7 +16,7 @@ add_executable(${PROJECT_NAME} ${SRC_DIR}/main.cpp
 
 set(CMAKE_EXECUTABLE_SUFFIX ".html")
 set_target_properties(${PROJECT_NAME} PROPERTIES
-        LINK_FLAGS "-s DISABLE_EXCEPTION_CATCHING=1 -s USE_GLFW=3 -s FULL_ES3=1 -s WASM=1 -s ALLOW_MEMORY_GROWTH=1 -s NO_EXIT_RUNTIME=0 -s ASSERTIONS=1")
+        LINK_FLAGS "-s DISABLE_EXCEPTION_CATCHING=1 -s USE_GLFW=3 -s FULL_ES3=1 -s WASM=1 -s ALLOW_MEMORY_GROWTH=1 -s NO_EXIT_RUNTIME=0 -s ASSERTIONS=1 ----shell-file ${CMAKE_SOURCE_DIR}/src/misc/shell_minimal.html")
 
 target_include_directories(${PROJECT_NAME}
         PRIVATE
