@@ -43,5 +43,22 @@ int main() {
   glfwMakeContextCurrent(window);
   glfwSwapInterval(1);  // Enable vsync
 
+  // Setup ImGui style
+  ImGui::StyleColorsDark();
+
+  // Setup Platform/Renderer backends
+  ImGui_ImplGlfw_InitForOpenGL(window, true);
+  ImGui_ImplOpenGL3_Init(glsl_version);
+
+  emscripten_set_main_loop_arg(main_loop, window, 0, 1);
+
+  // Cleanup
+  ImGui_ImplOpenGL3_Shutdown();
+  ImGui_ImplGlfw_Shutdown();
+  ImGui::DestroyContext();
+
+  glfwDestroyWindow(window);
+  glfwTerminate();
+
   return 0;
 }
